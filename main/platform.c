@@ -62,6 +62,10 @@
 
 #include "ota-tftp.h"
 
+#ifndef CONFIG_ESP_WIFI_IS_STATION
+#define CONFIG_ESP_WIFI_IS_STATION 0
+#endif
+
 uint32_t swd_delay_cnt;
 #define SWD_CYCLES_PER_CLOCK 19L
 #define SWD_TOTAL_CYCLES 127L
